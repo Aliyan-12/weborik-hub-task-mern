@@ -1,18 +1,36 @@
-Instructions to run the code:
 
-Clone the repo:
-    git clone https://github.com/Aliyan-12/weborik-hub-task-mern.git
+**Login Credentials:**
+```
+Email: admin@admin.com
+Password: admin123
+```
 
-Copy .env:
-    Use cp .env.example .env command to copy env file and change the required fields.
+**Clone Repository:**
+```bash
+git clone https://github.com/Aliyan-12/weborik-hub-task-mern.git
+```
 
-For frontend/client side:
-    cd client/
-    npm install
-    npm run dev
+**Copy Environment file:**
+- Copy `.env.example` to `.env` in server folder
+- Update the following fields:
+```
+JWT_SECRET=your_secret_key
+PORT=5000
+```
 
-For backend/Nodejs API:
-    cd server/
-    npm install
-    node index.js
+**Frontend Setup**
+```bash
+cd client
+npm install
+npm run dev
+```
+Frontend will run on: **http://localhost:5173**
+
+**Backend Setup**
+```bash
+cd server
+npm install
+node index.js
+```
+Backend will run on: **http://localhost:5000**
 
