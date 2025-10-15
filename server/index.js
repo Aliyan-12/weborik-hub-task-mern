@@ -15,11 +15,6 @@ if (!process.env.JWT_SECRET) {
   process.exit(1);
 }
 
-const existingUser = await User.findOne({ where: { email: 'admin@admin.com' } });
-if (!existingUser) {
-  seedUsers();
-}
-
 const app = express();
 
 app.use(cors({
@@ -58,6 +53,10 @@ const startServer = async () => {
       console.log('Database connection has been established successfully.');
       await sequelize.sync();
       console.log('Database tables updated');
+      const existingUser = await User.findOne({ where: { email: 'admin@admin.com' } });
+      if (!existingUser) {
+        seedUsers();
+      }
       const PORT = process.env.PORT || 5000;
       app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);

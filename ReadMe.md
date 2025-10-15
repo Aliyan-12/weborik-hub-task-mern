@@ -2,7 +2,7 @@
 **Login Credentials:**
 ```
 Email: admin@admin.com
-Password: admin123
+Password: password123
 ```
 
 **Clone Repository:**

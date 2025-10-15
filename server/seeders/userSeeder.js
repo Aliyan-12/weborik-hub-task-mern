@@ -22,7 +22,7 @@ const seedUsers = async () => {
   } catch (error) {
     console.error('Error seeding user:', error);
   } finally {
-    await sequelize.close();
+    // await sequelize.close();
   }
 };
 
